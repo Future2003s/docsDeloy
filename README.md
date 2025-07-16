@@ -113,6 +113,22 @@ sudo systemctl restart nginx
 sudo service nginx restart
 ```
 
+
+### NextJS
+```bash
+pm2 start npm --name "nextjs-app" -- start
+```
+
+- Build NodeJS
+# Xóa dist trước
+rimraf ./dist
+
+# Build bằng tsc
+NODE_OPTIONS="--max-old-space-size=8192" npx tsc
+
+# Nếu tsc thành công, chạy tiếp tsc-alias
+NODE_OPTIONS="--max-old-space-size=8192" npx tsc-alias
+
 ### Domain and SSL setup
 
 ```bash
